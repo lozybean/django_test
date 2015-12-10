@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    欢迎主页
+{% endblock %}
+
+{% block content %}
+    {% include 'ad.html' %}
+    Hi {{ user }}, welcome home.
+    {% if address %}
+        <p>you are from {{ address }}!</p>
+    {% endif %}
+    {% for people in peoples %}
+        <li>{{ people.name }}</li>
+    {% endfor %}
+{% endblock %}
